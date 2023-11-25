@@ -20,7 +20,7 @@ jobs:
         run: npm install -g webdriverio
 
       - name: Run WebdriverIo tests
-        run: npm run test:chrome
+        run: npm run test:firefox
 
       - name: Generate Allure Report
         if: always()
