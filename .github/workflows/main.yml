@@ -16,23 +16,21 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
       - name: Install WebdriverIo
         run: npm install -g webdriverio
+
       - name: Run WebdriverIo tests
         run: npm run test:chrome
 
       - name: Generate Allure Report
         if: always()
         run: npm run allure-report
+
       - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: webdriverIo-test-results
-          path: test-results/
-      - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: allure-test-results
           path: allure-report/
 
       - name: Get Allure history
