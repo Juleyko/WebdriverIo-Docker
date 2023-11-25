@@ -10,6 +10,9 @@ export const config = {
     {
       maxInstances: 1,
       browserName: "chrome",
+      "goog:chromeOptions": {
+        args: ["headless", "disable-gpu"],
+      },
       acceptInsecureCerts: true,
     },
   ],
