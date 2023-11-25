@@ -11,7 +11,11 @@
     "test": "wdio",
     "test:chrome": "wdio run ./wdio.conf.chrome.js",
     "test:firefox": "wdio run ./wdio.conf.firefox.js",
-    "test:parallel": "wdio run ./wdio.conf.parallel.js"
+    "test:parallel": "wdio run ./wdio.conf.parallel.js",
+    
+    "allure-generate": "npx allure generate allure-results -o allure-report --clean",
+    "allure-view-report": "npx allure open allure-report",
+    "allure-report": "allure generate ./allure-results --clean"
 
   }
 }
