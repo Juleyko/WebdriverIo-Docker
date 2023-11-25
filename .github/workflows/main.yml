@@ -15,7 +15,7 @@ jobs:
           node-version: "18.x"
 
       - name: Run WebdriverIo tests
-        run: npm run wdio
+        run: npm run test
       - name: Generate Allure Report
         if: always()
         run: npm run allure-report
