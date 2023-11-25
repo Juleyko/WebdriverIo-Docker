@@ -18,7 +18,6 @@ jobs:
         run: npm ci
       - name: Install WebdriverIo
         run: npm install -g webdriverio
-
       - name: Run WebdriverIo tests
         run: npm run test:chrome
 
