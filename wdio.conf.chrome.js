@@ -8,7 +8,7 @@ export const config = {
   capabilities: [
     {
       maxInstances: 1,
-      browserName: "chromium",
+      browserName: "chrome",
       "goog:chromeOptions": {
         args: [
           "--no-sandbox",
@@ -24,7 +24,7 @@ export const config = {
   logLevel: "info",
   bail: 0,
   baseUrl: "http://localhost",
-  port: 4444,
+  // port: 4444,
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
