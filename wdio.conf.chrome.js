@@ -26,7 +26,7 @@ export const config = {
   framework: "mocha",
   // services: ["docker"],
   reporters: [
-    "spec",
+    // "spec",
     [
       "allure",
       {
