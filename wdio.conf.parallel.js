@@ -18,7 +18,7 @@ export const config = {
       acceptInsecureCerts: true,
     },
   ],
-
+  port: 4444,
   logLevel: "info",
   bail: 0,
   baseUrl: "http://localhost",
@@ -26,8 +26,18 @@ export const config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   // services: ["chromedriver"],
+  services: ["docker"],
   framework: "mocha",
-  reporters: ["spec"],
+  reporters: [
+    [
+      "allure",
+      {
+        outputDir: "allure-results",
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+      },
+    ],
+  ],
   mochaOpts: {
     ui: "bdd",
     timeout: 60000,

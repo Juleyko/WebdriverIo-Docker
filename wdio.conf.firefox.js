@@ -5,6 +5,7 @@ export const config = {
     browser.setWindowSize(1200, 800);
   },
   runner: "local",
+
   specs: ["./test/**/specs/*.js"],
   capabilities: [
     {
@@ -13,6 +14,7 @@ export const config = {
       acceptInsecureCerts: true,
     },
   ],
+
   logLevel: "info",
   bail: 0,
   baseUrl: "http://localhost",
@@ -20,6 +22,7 @@ export const config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   // services: ["chromedriver"],
+  services: ["docker"],
   framework: "mocha",
   reporters: ["spec"],
   mochaOpts: {

@@ -1,5 +1,4 @@
 export const config = {
-  //
   before: function (capabilities, specs) {
     browser.url("https://elementalselenium.com/");
     browser.setWindowSize(1200, 800);
@@ -9,9 +8,15 @@ export const config = {
   capabilities: [
     {
       maxInstances: 1,
-      browserName: "chrome",
+      browserName: "chromium",
       "goog:chromeOptions": {
-        args: ["headless", "disable-gpu"],
+        args: [
+          "--no-sandbox",
+          "--disable-infobars",
+          "--headless",
+          "--disable-gpu",
+          "--window-size=1440,735",
+        ],
       },
       acceptInsecureCerts: true,
     },
@@ -19,12 +24,15 @@ export const config = {
   logLevel: "info",
   bail: 0,
   baseUrl: "http://localhost",
+  port: 4444,
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   // services: ["chromedriver"],
   framework: "mocha",
+  // services: ["docker"],
   reporters: [
+    "spec",
     [
       "allure",
       {
