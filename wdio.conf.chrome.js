@@ -10,13 +10,7 @@ export const config = {
       maxInstances: 1,
       browserName: "chrome",
       "goog:chromeOptions": {
-        args: [
-          "--no-sandbox",
-          "--disable-infobars",
-          "--headless",
-          "--disable-gpu",
-          "--window-size=1440,735",
-        ],
+        args: ["headless", "disable-gpu"],
       },
       acceptInsecureCerts: true,
     },
