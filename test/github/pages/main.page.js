@@ -204,6 +204,11 @@ class MainPage extends Page {
   async clickOnExternalResourcesLink() {
     await this.externalResourcesLink.click();
   }
+  async isCopyrightFooterTextVisible() {
+    await expect(this.copyrightFooter).toHaveTextContaining(
+      "© 2023 Sauce Labs Inc., all rights reserved"
+    );
+  }
 }
 
 export default new MainPage();
