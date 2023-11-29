@@ -2,7 +2,8 @@
   "name": "my-new-project",
   "type": "module",
   "dependencies": {
-    "allure-commandline": "^2.24.1"
+    "allure-commandline": "^2.24.1",
+    "webdriver-manager": "^12.1.9"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^8.24.0",

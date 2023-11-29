@@ -18,7 +18,6 @@ export const config = {
       acceptInsecureCerts: true,
     },
   ],
-  port: 4444,
   logLevel: "info",
   bail: 0,
   baseUrl: "http://localhost",
