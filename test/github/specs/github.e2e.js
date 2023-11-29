@@ -3,10 +3,6 @@ import tipsPage from "../pages/tips.page.js";
 import externalResourcesPage from "../pages/external-resources.page.js";
 
 describe("Check the site Elemental Selenium", () => {
-  beforeEach(async () => {
-    // Вхід на сайт перед кожним тестом
-    await mainPage.openPage();
-  });
   it("[case 1] should check main logo", async () => {
     await mainPage.isVisibleMainLogo();
   });
