@@ -21,6 +21,7 @@
     "allure-generate": "npx allure generate allure-results -o allure-report --clean",
     "allure-view-report": "npx allure open allure-report",
     "allure-report": "allure generate ./allure-results --clean",
-    "docker-build": "docker image build -t test:latest ."
+    "docker-build": "docker image build -t test:latest .",
+    "docker-run": "docker  run  -t test:latest"
   }
 }
